@@ -79,12 +79,23 @@
 # print(result)
 
 
-n=int(input("check if num is prime: "))
-def is_prime (n):
-     if n < 2:
-        return False
-     for i in range (2, n):
-         if n % i == 0 :
-            return False
-     return True
-print(is_prime(n))
+# n=int(input("check if num is prime: "))
+# def is_prime (n):
+#      if n < 2:
+#         return False
+#      for i in range (2, n):
+#          if n % i == 0 :
+#             return False
+#      return True
+# print(is_prime(n))
+
+
+def guess_num (n):
+    if e == n:
+        print("yay, you got it!")
+    elif e < n :
+        print("too low!")
+    elif e > n :
+        print("too high!")
+e=int(input("enter your guess: "))
+guess_num(7)
