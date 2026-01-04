@@ -63,6 +63,7 @@
 #   else:
 #     print("zero")
 
+# print("iiiiiii")
 
 # def calculator (a, b, operation):
 #     if operation == "+":
@@ -90,12 +91,12 @@
 # print(is_prime(n))
 
 
-def guess_num (n):
-    if e == n:
-        print("yay, you got it!")
-    elif e < n :
-        print("too low!")
-    elif e > n :
-        print("too high!")
-e=int(input("enter your guess: "))
-guess_num(7)
+# def guess_num (n):
+#     if e == n:
+#         print("yay, you got it!")
+#     elif e < n :
+#         print("too low!")
+#     elif e > n :
+#         print("too high!")
+# e=int(input("enter your guess: "))
+# guess_num(7)
