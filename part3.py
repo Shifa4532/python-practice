@@ -20,7 +20,42 @@
 # list_1.sort()
 # print(list_1)
 
-
 # print("hello")
 
+# tup=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+# even = []
+# odd = []
+# for x in tup :
+#     if x % 2 == 0 :
+#        even.append(x)
+#     else:
+#         odd.append(x)
+# even=tuple(even)
+# odd=tuple(odd)
+# print(even)
+# print(odd)
 
+
+dict = {
+    "name" : ["john", "mary", "chris", "luka"],
+    "marks" : ["98", "96", "99", "95"]
+}
+A = "Add a student"
+B = "Update marks"
+C = "Search a student"
+D = "Display all students marks"
+opt = input("Option: ")
+new_item = "Add a student: "
+updation_item = "Update marks: "
+fetch_item = "Search a student: "
+if "opt" == A : 
+     input(new_item)
+elif "opt" == B :
+     input(updation_item)
+elif "opt" == C :
+     input(fetch_item)
+else :
+     print()
+print(dict.update(updation_item))
+print(dict.update(new_item))
+print(dict.get(fetch_item))
