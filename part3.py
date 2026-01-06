@@ -20,7 +20,7 @@
 # list_1.sort()
 # print(list_1)
 
-# print("hello")
+# print("hello") by huda
 
 # tup=(1, 2, 3, 4, 5, 6, 7, 8, 9)
 # even = []
@@ -36,26 +36,41 @@
 # print(odd)
 
 
-dict = {
-    "name" : ["john", "mary", "chris", "luka"],
-    "marks" : ["98", "96", "99", "95"]
-}
-A = "Add a student"
-B = "Update marks"
-C = "Search a student"
-D = "Display all students marks"
-opt = input("Option: ")
-new_item = "Add a student: "
-updation_item = "Update marks: "
-fetch_item = "Search a student: "
-if "opt" == A : 
-     input(new_item)
-elif "opt" == B :
-     input(updation_item)
-elif "opt" == C :
-     input(fetch_item)
-else :
-     print()
-print(dict.update(updation_item))
-print(dict.update(new_item))
-print(dict.get(fetch_item))
+students = {}
+while True :
+     print('''A - Add a student
+B - Update marks
+C - Search for a student
+D - Display all students and marks
+E - Exit''')
+     opt = input("Option: ").upper()
+     if opt == "A":
+          name = input("Enter name: ")
+          marks = int(input("Enter marks: "))
+          students[name]= marks
+          print("Student added successfully")
+     elif opt == "B":
+          name = input("Enter name: ")
+          if name in students :
+               marks = int(input("Enter marks: "))
+               students[name]= marks
+               print("Marks updated successfully")
+          else:
+               print("Student not found!") 
+     elif opt == "C":
+          name = input("Enter name: ")
+          if name in students:
+               print("Marks: ", students[name])
+          else:
+               print("Student not found!") 
+     elif opt == "D":
+          if not students :
+              print("No students found!")
+          else :
+               for name, marks in students.items():
+                    print(name, ":", marks)
+     elif opt == "E":
+          print("Exiting program...")  
+          break
+     else:
+          print("Invalid option")  
