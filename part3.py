@@ -76,18 +76,32 @@
 #           print("Invalid option")  
 
 
-words = ["apple", "banana", "kiwi", "cherry", "mango"]
-dict = {}
-for i in words :
-     dict[i] = len(i)
-print(dict)
+# words = ["apple", "banana", "kiwi", "cherry", "mango"]
+# dict = {}
+# for i in words :
+#      dict[i] = len(i)
+# print(dict)
 
 
-sentence = input("enter: ")
-count = 0
-for ch in sentence:
-   if ch == " " :
-      count += 1 
-print(count)
+# sentence = input("enter: ")
+# count = 0
+# for ch in sentence:
+#    if ch == " " :
+#       count += 1 
+# print(count)
 
 
+list1 = list(map(int, input("enter a list of nums: ").split()))
+list2 = list(map(int, input("enter another list of nums: ").split()))
+found = False
+for el in list1 :
+    if el in list2 :
+        found = True
+        break
+if found :
+    print("common!")
+else :
+    print("not common!")
+
+
+   
