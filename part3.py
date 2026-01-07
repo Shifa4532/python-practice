@@ -36,41 +36,58 @@
 # print(odd)
 
 
-students = {}
-while True :
-     print('''A - Add a student
-B - Update marks
-C - Search for a student
-D - Display all students and marks
-E - Exit''')
-     opt = input("Option: ").upper()
-     if opt == "A":
-          name = input("Enter name: ")
-          marks = int(input("Enter marks: "))
-          students[name]= marks
-          print("Student added successfully")
-     elif opt == "B":
-          name = input("Enter name: ")
-          if name in students :
-               marks = int(input("Enter marks: "))
-               students[name]= marks
-               print("Marks updated successfully")
-          else:
-               print("Student not found!") 
-     elif opt == "C":
-          name = input("Enter name: ")
-          if name in students:
-               print("Marks: ", students[name])
-          else:
-               print("Student not found!") 
-     elif opt == "D":
-          if not students :
-              print("No students found!")
-          else :
-               for name, marks in students.items():
-                    print(name, ":", marks)
-     elif opt == "E":
-          print("Exiting program...")  
-          break
-     else:
-          print("Invalid option")  
+# students = {}
+# while True :
+#      print('''A - Add a student
+# B - Update marks
+# C - Search for a student
+# D - Display all students and marks
+# E - Exit''')
+#      opt = input("Option: ").upper()
+#      if opt == "A":
+#           name = input("Enter name: ")
+#           marks = int(input("Enter marks: "))
+#           students[name]= marks
+#           print("Student added successfully")
+#      elif opt == "B":
+#           name = input("Enter name: ")
+#           if name in students :
+#                marks = int(input("Enter marks: "))
+#                students[name]= marks
+#                print("Marks updated successfully")
+#           else:
+#                print("Student not found!") 
+#      elif opt == "C":
+#           name = input("Enter name: ")
+#           if name in students:
+#                print("Marks: ", students[name])
+#           else:
+#                print("Student not found!") 
+#      elif opt == "D":
+#           if not students :
+#               print("No students found!")
+#           else :
+#                for name, marks in students.items():
+#                     print(name, ":", marks)
+#      elif opt == "E":
+#           print("Exiting program...")  
+#           break
+#      else:
+#           print("Invalid option")  
+
+
+words = ["apple", "banana", "kiwi", "cherry", "mango"]
+dict = {}
+for i in words :
+     dict[i] = len(i)
+print(dict)
+
+
+sentence = input("enter: ")
+count = 0
+for ch in sentence:
+   if ch == " " :
+      count += 1 
+print(count)
+
+
