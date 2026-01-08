@@ -91,17 +91,32 @@
 # print(count)
 
 
-list1 = list(map(int, input("enter a list of nums: ").split()))
-list2 = list(map(int, input("enter another list of nums: ").split()))
-found = False
-for el in list1 :
-    if el in list2 :
-        found = True
-        break
-if found :
-    print("common!")
-else :
-    print("not common!")
+# list1 = list(map(int, input("enter a list of nums: ").split()))
+# list2 = list(map(int, input("enter another list of nums: ").split()))
+# found = False
+# for el in list1 :
+#     if el in list2 :
+#         found = True
+#         break
+# if found :
+#     print("common!")
+# else :
+#     print("not common!")
 
 
-   
+def print_duplicates(lst):
+    # Count occurrences of each element
+    count_dict = {}
+    for element in lst:
+        count_dict[element] = count_dict.get(element, 0) + 1
+    
+    # Print elements that appear more than once
+    print("Elements appearing more than once:")
+    for element, count in count_dict.items():
+        if count > 1:
+            print(f"{element} (appears {count} times)")
+
+# Example usage
+my_list = [1, 2, 3, 2, 4, 5, 1, 6, 7, 1, 8, 2]
+print_duplicates(my_list)
+
