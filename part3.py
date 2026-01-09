@@ -106,9 +106,13 @@
 
 lst = [1,2,3,4,4,6,7,2,2]
 seen = set()
-duplicates = set()
+duplicate = set()
 for el in lst :
     if el in seen :
-        duplicates[el] = 
+        duplicate.add(el)
     else :
-        seen[el] = 
+        seen.add(el) 
+print(seen)
+print(duplicate)
+
+
