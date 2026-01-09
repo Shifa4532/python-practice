@@ -104,15 +104,22 @@
 #     print("not common!")
 
 
-lst = [1,2,3,4,4,6,7,2,2]
-seen = set()
-duplicate = set()
-for el in lst :
-    if el in seen :
-        duplicate.add(el)
-    else :
-        seen.add(el) 
-print(seen)
-print(duplicate)
+# lst = [1,2,3,4,4,6,7,2,2]
+# seen = set()
+# duplicate = set()
+# for el in lst :
+#     if el in seen :
+#         duplicate.add(el)
+#     else :
+#         seen.add(el) 
+# print(seen)
+# print(duplicate)
 
 
+s = input("enter a string: ")
+count = 0 
+for ch in s:
+    if s.count(ch) == 1 :
+        print(ch)
+        count += 1
+print(count)
