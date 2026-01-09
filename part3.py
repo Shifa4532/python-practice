@@ -104,5 +104,11 @@
 #     print("not common!")
 
 
-
-
+lst = [1,2,3,4,4,6,7,2,2]
+seen = set()
+duplicates = set()
+for el in lst :
+    if el in seen :
+        duplicates[el] = 
+    else :
+        seen[el] = 
