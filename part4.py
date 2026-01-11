@@ -1,21 +1,18 @@
-#hi
-class product :
-    count = 0
-    def __init__(self, name, price) :
-        self.name = name 
-        self.price = price
-        product.count += 1
-    def get_info(self) :
-        print(f"price of {self.name} is Rs.{self.price}")
-    @classmethod
-    def get_count(cls):
-        print(f"total products in store = {cls.count}")
-    @staticmethod
-    def calc_discount(price, discount) :
-        print(f"discounted price = {price - (price * discount/100)}")
-p1 = product("phone", 10_000)
-p2 = product("laptop", 40_000)
-p3 = product("pen", 10)
-p1.get_info()
-product.get_count()
-p1.calc_discount(p1.price, 12)
+class bank_account :
+    def __init__(self, name, acc_number, balance ):
+        self.name = name
+        self.acc_number = acc_number
+        self.balance = balance
+    def __str__(self):
+        return f"Name: {self.name}, Account No: {self.acc_number}, Balance: {self.balance}"
+    def deposit (self, amount) :
+        self.amount += amount
+        print(f"Deposited amount {amount}. New balance: {self.balance}")
+    def withdraw (self, amount) :
+        if amount <= self.balance :
+            self.balance -= amount 
+            print(f"Withdrawn amount {amount}. New balance: {self.balance}")
+        else :
+            print("Insufficient balance")
+p1 = bank_account("rajesh", 23456789, 10_000)
+print(p1) 
