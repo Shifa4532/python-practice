@@ -21,11 +21,11 @@
 
 
 class book :
-    def __init__(self, title, author, reviews):
+    def __init__(self, title, author):
        self.title = title
        self.author = author 
        self.reviews = []
-    def get_review (self, rev) :
+    def add_review (self, rev) :
         self.reviews.append(rev)
     def count_review(self) :
         return len(self.reviews)
@@ -35,5 +35,8 @@ class book :
         else :
             for i, review in enumerate(self.reviews, start = 1) :
                 print(f"{i}. {review}")
-                
-        
+b1 = book("ikikgai", "garcia")
+b1.add_review("spiritual :)")
+b1.add_review("peaceful")
+print("total reviews: ", b1.count_review())
+b1.display_reviews() 
