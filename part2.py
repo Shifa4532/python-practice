@@ -1,10 +1,10 @@
-# salary=int(input("enter your salary: "))
-# if salary < 30000:
-#    print("tax levied on you is 5%")
-# elif (salary >= 30000 and salary <= 70000):
-#    print("tax levied on you is 15%")
-# else:
-#    print("tax levied on you is 25%")
+salary=int(input("enter your salary: "))
+if salary < 30000:
+   print("tax levied on you is 5%")
+elif (salary >= 30000 and salary <= 70000):
+   print("tax levied on you is 15%")
+else:
+   print("tax levied on you is 25%")
 
 
 # a=int(input("enter a number a: "))
@@ -63,7 +63,7 @@
 #   else:
 #     print("zero")
 
-# print("iiiiiii")
+# print("iiiiiii") by ibrahim
 
 # def calculator (a, b, operation):
 #     if operation == "+":
