@@ -61,7 +61,12 @@ class student:
           self.__roll_no = roll_no
         else :
            print("Invalid roll number! Must be between 1 and 100.")
-   #  def get_marks(self) :
-   #     return self.__marks
-   #  def set_marks(self) :
-       
+    def get_marks(self) :
+       return self.__marks
+    def set_marks(self, marks) :
+        if isinstance(marks, (int, float)) and marks >= 0 :
+           self.__marks = marks
+        else :
+            print("Invalid Marks! Marks cannot be negative.")
+
+            
