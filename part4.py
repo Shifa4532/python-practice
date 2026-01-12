@@ -68,5 +68,7 @@ class student:
            self.__marks = marks
         else :
             print("Invalid Marks! Marks cannot be negative.")
-
-            
+    def __str__(self) :
+       return f"Name: {self.__name}, Roll No: {self.__roll_no}, Marks: {self.__marks}"
+s1 = student("rama", 35, 56.7)
+print(s1) 
