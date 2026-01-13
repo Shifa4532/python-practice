@@ -42,33 +42,89 @@
 # b1.display_reviews() 
 
 
-class student:
-    def __init__(self, name, roll_no, marks) : 
-       self.__name = name
-       self.__roll_no = roll_no
-       self.__marks = marks
-    def get_name (self) :
-        return self.__name 
-    def set_name (self, name) :
-        if isinstance(name, str) and name.strip() != "" :
-          self.__name = name
-        else :
-            print("Invalid name! Name cannot be empty.")
-    def get_roll_no(self) :
-       return self.__roll_no
-    def set_roll_no (self, roll_no) :
-        if isinstance(roll_no, int) and 1 <= roll_no <= 100:
-          self.__roll_no = roll_no
-        else :
-           print("Invalid roll number! Must be between 1 and 100.")
-    def get_marks(self) :
-       return self.__marks
-    def set_marks(self, marks) :
-        if isinstance(marks, (int, float)) and marks >= 0 :
-           self.__marks = marks
-        else :
-            print("Invalid Marks! Marks cannot be negative.")
-    def __str__(self) :
-       return f"Name: {self.__name}, Roll No: {self.__roll_no}, Marks: {self.__marks}"
-s1 = student("rama", 35, 56.7)
-print(s1) 
+# class student:
+#     def __init__(self, name, roll_no, marks) : 
+#        self.__name = name
+#        self.__roll_no = roll_no
+#        self.__marks = marks
+#     def get_name (self) :
+#         return self.__name 
+#     def set_name (self, name) :
+#         if isinstance(name, str) and name.strip() != "" :
+#           self.__name = name
+#         else :
+#             print("Invalid name! Name cannot be empty.")
+#     def get_roll_no(self) :
+#        return self.__roll_no
+#     def set_roll_no (self, roll_no) :
+#         if isinstance(roll_no, int) and 1 <= roll_no <= 100:
+#           self.__roll_no = roll_no
+#         else :
+#            print("Invalid roll number! Must be between 1 and 100.")
+#     def get_marks(self) :
+#        return self.__marks
+#     def set_marks(self, marks) :
+#         if isinstance(marks, (int, float)) and marks >= 0 :
+#            self.__marks = marks
+#         else :
+#             print("Invalid Marks! Marks cannot be negative.")
+#     def __str__(self) :
+#        return f"Name: {self.__name}, Roll No: {self.__roll_no}, Marks: {self.__marks}"
+# s1 = student("rama", 35, 96.7)
+# print(s1) 
+
+
+class shape :
+    def area (self) :
+       pass 
+class circle (shape):
+    def area (self) :
+       print("pi*r^2")
+class rectangle (shape) :
+    def area (self) :
+        print("l*b")
+class triangle (shape) :
+    def area (self) :
+        print("1/2*b*h")
+s1 = circle()
+s2 = rectangle()
+s1.area()
+s2.area()
+
+
+class vehicle :
+    def __init__(self, brand, model) :
+       self.brand = brand
+       self.model = model
+class car (vehicle) :
+    def __init__(self, brand, model, seats) :
+        super().__init__(brand, model)
+        self.seats = seats
+class bike (vehicle) :
+    def __init__(self, brand, model, engine_cc) :
+        super().__init__(brand, model)
+        self.engine_cc = engine_cc 
+c1 = car("toyota", "camry", 5 )
+print(c1.brand, c1.model, c1.seats)
+c2 = bike("yamaha", "r15", 155)
+print(c2.brand, c2.model, c2.engine_cc)
+
+
+from abc import ABC, abstractmethod
+class employee(ABC) :
+    @abstractmethod
+    def calculate_salary(self):
+        pass
+class intern (employee):
+    def calculate_salary(self):
+        return 10000
+class full_time_employee (employee):
+    def calculate_salary(self):
+        return 50000
+class contract_employee (employee):
+    def calculate_salary(self):
+        return 30000
+i1 = intern()
+print(i1.calculate_salary())   
+
+
