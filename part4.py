@@ -74,57 +74,72 @@
 # print(s1) 
 
 
-class shape :
-    def area (self) :
-       pass 
-class circle (shape):
-    def area (self) :
-       print("pi*r^2")
-class rectangle (shape) :
-    def area (self) :
-        print("l*b")
-class triangle (shape) :
-    def area (self) :
-        print("1/2*b*h")
-s1 = circle()
-s2 = rectangle()
-s1.area()
-s2.area()
+# class shape :
+#     def area (self) :
+#        pass 
+# class circle (shape):
+#     def area (self) :
+#        print("pi*r^2")
+# class rectangle (shape) :
+#     def area (self) :
+#         print("l*b")
+# class triangle (shape) :
+#     def area (self) :
+#         print("1/2*b*h")
+# s1 = circle()
+# s2 = rectangle()
+# s1.area()
+# s2.area()
 
 
-class vehicle :
-    def __init__(self, brand, model) :
-       self.brand = brand
-       self.model = model
-class car (vehicle) :
-    def __init__(self, brand, model, seats) :
-        super().__init__(brand, model)
-        self.seats = seats
-class bike (vehicle) :
-    def __init__(self, brand, model, engine_cc) :
-        super().__init__(brand, model)
-        self.engine_cc = engine_cc 
-c1 = car("toyota", "camry", 5 )
-print(c1.brand, c1.model, c1.seats)
-c2 = bike("yamaha", "r15", 155)
-print(c2.brand, c2.model, c2.engine_cc)
+# class vehicle :
+#     def __init__(self, brand, model) :
+#        self.brand = brand
+#        self.model = model
+# class car (vehicle) :
+#     def __init__(self, brand, model, seats) :
+#         super().__init__(brand, model)
+#         self.seats = seats
+# class bike (vehicle) :
+#     def __init__(self, brand, model, engine_cc) :
+#         super().__init__(brand, model)
+#         self.engine_cc = engine_cc 
+# c1 = car("toyota", "camry", 5 )
+# print(c1.brand, c1.model, c1.seats)
+# c2 = bike("yamaha", "r15", 155)
+# print(c2.brand, c2.model, c2.engine_cc)
 
 
-from abc import ABC, abstractmethod
-class employee(ABC) :
-    @abstractmethod
-    def calculate_salary(self):
-        pass
-class intern (employee):
-    def calculate_salary(self):
-        return 10000
-class full_time_employee (employee):
-    def calculate_salary(self):
-        return 50000
-class contract_employee (employee):
-    def calculate_salary(self):
-        return 30000
-i1 = intern()
-print(i1.calculate_salary())   
+# from abc import ABC, abstractmethod
+# class employee(ABC) :
+#     @abstractmethod
+#     def calculate_salary(self):
+#         pass
+# class intern (employee):
+#     def calculate_salary(self):
+#         return 10000
+# class full_time_employee (employee):
+#     def calculate_salary(self):
+#         return 50000
+# class contract_employee (employee):
+#     def calculate_salary(self):
+#         return 30000
+# i1 = intern()
+# print(i1.calculate_salary())   
+
+
+class person :
+    def __init__(self, name, age = None, address = None):
+        self.name = name
+        self.age = age
+        self.address = address
+    def display (self) :
+        print(f"Name:{self.name}")
+        print(f"Age:{self.age}")
+        print(f"Address:{self.address}")
+p1 = person("shifa", 20, "lucknow")
+p2 = person("shifa", 20)
+p3 = person("shifa")
+print(p1.name, p1.age, p1.address)
 
 
