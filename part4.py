@@ -128,18 +128,35 @@
 # print(i1.calculate_salary())   
 
 
-class person :
-    def __init__(self, name, age = None, address = None):
-        self.name = name
-        self.age = age
-        self.address = address
-    def display (self) :
-        print(f"Name:{self.name}")
-        print(f"Age:{self.age}")
-        print(f"Address:{self.address}")
-p1 = person("shifa", 20, "lucknow")
-p2 = person("shifa", 20)
-p3 = person("shifa")
-print(p1.name, p1.age, p1.address)
+# class person :
+#     def __init__(self, name, age = None, address = None):
+#         self.name = name
+#         self.age = age
+#         self.address = address
+#     def display (self) :
+#         print(f"Name:{self.name}")
+#         print(f"Age:{self.age}")
+#         print(f"Address:{self.address}")
+# p1 = person("shifa", 20, "lucknow")
+# p2 = person("shifa", 20)
+# p3 = person("shifa")
+# print(p1.name, p1.age, p1.address)
 
 
+class herbivore :
+    def eats_plant(self):
+        print("eats 🌱.")  
+class carnivore :
+    def eats_meat(self):
+        print("eats 🥩.")  
+class omnivore :
+    def eats_both(self):
+        print("eats both 🥩 and 🌱.")
+class bear (herbivore, carnivore, omnivore) :
+    def info(self):
+        print("Bear is an omnivorous animal 🐻")
+b = bear()
+b.info()
+b.eats_plant()
+b.eats_meat()
+b.eats_both()
