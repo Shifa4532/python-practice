@@ -143,16 +143,16 @@
 # print(p1.name, p1.age, p1.address)
 
 
-class player :
-     player_count = 0
-     def __init__(self, name, level):
-         self.name = name
-         self.level = level
-         player.player_count += 1
-p1 = player("alex", 4)
-p2 = player("sara", 5)
-p3 = player("max", 3)
-print(player.player_count)
+# class player :
+#      player_count = 0
+#      def __init__(self, name, level):
+#          self.name = name
+#          self.level = level
+#          player.player_count += 1
+# p1 = player("alex", 4)
+# p2 = player("sara", 5)
+# p3 = player("max", 3)
+# print(player.player_count)
 
 
 # class herbivore :
