@@ -143,20 +143,32 @@
 # print(p1.name, p1.age, p1.address)
 
 
-class herbivore :
-    def eats_plant(self):
-        print("eats 🌱.")  
-class carnivore :
-    def eats_meat(self):
-        print("eats 🥩.")  
-class omnivore :
-    def eats_both(self):
-        print("eats both 🥩 and 🌱.")
-class bear (herbivore, carnivore, omnivore) :
-    def info(self):
-        print("Bear is an omnivorous animal 🐻")
-b = bear()
-b.info()
-b.eats_plant()
-b.eats_meat()
-b.eats_both()
+class player :
+     player_count = 0
+     def __init__(self, name, level):
+         self.name = name
+         self.level = level
+         player.player_count += 1
+p1 = player("alex", 4)
+p2 = player("sara", 5)
+p3 = player("max", 3)
+print(player.player_count)
+
+
+# class herbivore :
+#     def eats_plant(self):
+#         print("eats 🌱.")  
+# class carnivore :
+#     def eats_meat(self):
+#         print("eats 🥩.")  
+# class omnivore :
+#     def eats_both(self):
+#         print("eats both 🥩 and 🌱.")
+# class bear (herbivore, carnivore, omnivore) :
+#     def info(self):
+#         print("Bear is an omnivorous animal 🐻")
+# b = bear()
+# b.info()
+# b.eats_plant()
+# b.eats_meat()
+# b.eats_both()
