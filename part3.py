@@ -116,10 +116,10 @@
 # print(duplicate)
 
 
-s = input("enter a string: ")
-count = 0 
-for ch in s:
-    if s.count(ch) == 1 :
-        print(ch)
-        count += 1
-print(count)
+# s = input("enter a string: ")
+# count = 0 
+# for ch in s:
+#     if s.count(ch) == 1 :
+#         print(ch)
+#         count += 1
+# print(count)
