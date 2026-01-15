@@ -37,3 +37,8 @@
 #     json.dump(data, f)
 
 
+try :
+    with open("data.txt", "r") as f :
+        pass
+except FileNotFoundError:
+    print("there is no such file!")
